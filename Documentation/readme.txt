@@ -65,7 +65,7 @@ Set the following paths in the makefile:
 INC_HDF5 = -I/hdf5_install_path/include
 LIB_HDF5 = -L/hdf5_install_path/lib
 HDF5LIBS = -L/hdf5_install_path/lib/ -lhdf5 -L/hdf5_install_path/lib/ -lhdf5_hl 
-MPELIB = -L/mpich2_install_path/lib/ -lmpe
+MPELIB = -L/mpich_install_path/lib/ -lmpe
 
 Finally, make everything:
 $ make
