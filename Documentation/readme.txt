@@ -5,7 +5,7 @@ Doesn't need sudo or root permissions, everything could be installed locally.
 http://www.hdfgroup.org/ftp/HDF5/releases/
 
 $ cd <top HDF5 source code directory>
-$ ./configure --prefix=<location for HDF5 software> 
+$ ./configure --prefix=<location for HDF5 software> --enable-parallel
 $ make 
 $ make check
 $ make install 
