@@ -5,27 +5,47 @@ Doesn't need sudo or root permissions, everything could be installed locally.
 http://www.hdfgroup.org/ftp/HDF5/releases/
 
 $ cd <top HDF5 source code directory>
-$ ./configure --prefix=<location for HDF5 software> 
+$ ./configure --prefix=<location for HDF5 software> --enable-parallel
 $ make 
 $ make check
 $ make install 
 
 
-2. Install the MPICH2 (or OpenMPI) that supports -lmpe library. For example, this one:
-http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3.2p1/mpich2-1.3.2p1.tar.gz
+2. Install the MPICH (or OpenMPI) that supports -lmpe library. For example, this one:
+https://www.mpich.org/downloads/
 During the installation of MPICH follow all the instructions in the README file.
 
 Newer versions of OpenMPI should be fine by default in a linux distro.
 
+
 3. Set environment variables:
- 
-$ PATH=mpich2_install_path/bin/:$PATH
-$ PATH=hdf5_install_path/lib/:$PATH
-$ LD_LIBRARY_PATH=hdf5_install_path/lib/:$LD_LIBRARY_PATH
+
+$ vi ~/.bashrc
+Add these at end of file:
+
+    PATH=mpich_install_path/bin/:$PATH
+    PATH=hdf5_install_path/lib/:$PATH
+    PATH=hdf5_install_path/include/:$PATH
+    LD_LIBRARY_PATH=hdf5_install_path/lib/:$LD_LIBRARY_PATH
 
 Note: these paths can also go at the beginning of the makefile.
 
-where mpich2_install_path is the path to the installed MPICH2, and hdf5_install_path is the path to the installed HDF5.
+where mpich_install_path is the path to the installed MPICH2, and hdf5_install_path is the path to the installed HDF5.
+
+3. Install H5hut. Recommanded version is 1.99.12
+https://gitlab.psi.ch/H5hut/src/-/tags
+
+$ cd <top H5hut source code directory>
+$ ./configure --prefix=<location for H5hut software> --enable-parallel --with-hdf5=<location for HDF5 software>
+$ make
+$ make test (optional)
+$ make install
+$ vi ~/.bashrc
+Add these at end of file:
+
+    PATH=H5hut_install_path/include/:$PATH
+    PATH=H5hut_install_path/lib/:$PATH
+
 
 4. Check out the repository:
 
