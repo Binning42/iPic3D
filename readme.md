@@ -1,7 +1,7 @@
 How-to install and run iPic3D on your (local) Linux machine.
 Doesn't need sudo or root permissions, everything could be installed locally.
 
-1. Install HDF5 library. The current version working properly with iPIC3D is 1.8.9
+1. Install HDF5 library. The current version working properly with iPIC3D is 1.8.9 <br/>
 http://www.hdfgroup.org/ftp/HDF5/releases/
 
 ```
@@ -13,9 +13,8 @@ $ make install
 ```
 
 2. Install the MPICH (or OpenMPI) that supports -lmpe library. For example, this one:
-https://www.mpich.org/downloads/
-During the installation of MPICH follow all the instructions in the README file.
-
+https://www.mpich.org/downloads/ <br/>
+During the installation of MPICH follow all the instructions in the README file. <br/>
 Newer versions of OpenMPI should be fine by default in a linux distro.
 
 
@@ -30,19 +29,19 @@ Add these at end of file:
     PATH=hdf5_install_path/include/:$PATH
     LD_LIBRARY_PATH=hdf5_install_path/lib/:$LD_LIBRARY_PATH
 ```
-Note: these paths can also go at the beginning of the makefile.
+Note: these paths can also go at the beginning of the makefile. <br/>
 
 where mpich_install_path is the path to the installed MPICH2, and hdf5_install_path is the path to the installed HDF5.
 
-4. Install H5hut. Recommanded version is 1.99.12
-https://gitlab.psi.ch/H5hut/src/-/tags
+4. Install H5hut. Recommanded version is 1.99.12 <br/>
+    https://gitlab.psi.ch/H5hut/src/-/tags
 
-* Requirements:
- - autotools (libtool, automake, autoconf >= 2.60)
- - C compiler supporting C99 (for example GCC >= 4.5)
- - MPI for parallel version (for example openmpi)
- - HDF5 >= 1.8.x
- - (optional) VTK to convert triangle or tetrahedral meshes from legacy VTK format to H5hut’s mesh format
+    Requirements:
+- autotools (libtool, automake, autoconf >= 2.60)
+- C compiler supporting C99 (for example GCC >= 4.5)
+- MPI for parallel version (for example openmpi)
+- HDF5 >= 1.8.x
+- (optional) VTK to convert triangle or tetrahedral meshes from legacy VTK format to H5hut’s mesh format
 ```
 $ sudo yum install libtool (optional)
 $ cd <top H5hut source code directory>
