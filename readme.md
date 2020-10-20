@@ -35,7 +35,16 @@ where mpich_install_path is the path to the installed MPICH2, and hdf5_install_p
 4. Install H5hut. Recommanded version is 1.99.12
 https://gitlab.psi.ch/H5hut/src/-/tags
 
+Requirements:
+* autotools (libtool, automake, autoconf >= 2.60)
+* C compiler supporting C99 (for example GCC >= 4.5)
+* MPI for parallel version (for example openmpi)
+* HDF5 >= 1.8.x
+* (optional) VTK to convert triangle or tetrahedral meshes from legacy VTK format to H5hut’s mesh format
+
+$ sudo yum install libtool (optional)
 $ cd <top H5hut source code directory>
+$ ./autogen.sh
 $ ./configure --prefix=<location for H5hut software> --enable-parallel --with-hdf5=<location for HDF5 software>
 $ make
 $ make test (optional)
