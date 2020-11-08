@@ -78,13 +78,13 @@ Set the following paths in the makefile:
 
 $ make
 ```
-7. Create the folder to store data (optional)
+7. Create the folder to store data
 ```
-$ mkdir path_save_data
+$ mkdir path_save_data (default is named data)
 $ cd inputfiles
 $ vi GEM.inp
-    SaveDirName    = /path_save_data     # Output directory
-    RestartDirName = /path_save_data     # Restart directory (for WriteMethod=default)
+    SaveDirName    = /path_save_data (default is named data)    # Output directory
+    RestartDirName = /path_save_data (default is named data)    # Restart directory (for WriteMethod=default)
 
 ```
 
