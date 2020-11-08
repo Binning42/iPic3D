@@ -78,8 +78,17 @@ Set the following paths in the makefile:
 
 $ make
 ```
+7. Create the folder to store data (optional)
+```
+$ mkdir path_save_data
+$ cd inputfiles
+$ vi GEM.inp
+    SaveDirName    = /path_save_data     # Output directory
+    RestartDirName = /path_save_data     # Restart directory (for WriteMethod=default)
 
-7. Running iPic3D
+```
+
+8. Running iPic3D
 ```
 $ mpiexec (or mpirun) -n 4 ./iPic3D inputfiles/GEM.inp
 ```
