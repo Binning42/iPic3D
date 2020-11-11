@@ -57,7 +57,7 @@ Add these at end of file:
     PATH=H5hut_install_path/lib/:$PATH
 ```
 
-5. Check out the repository:
+5. Check out the repository: (optional)
 ```
 $ svn co https://svn.esat.kuleuven.be/iPIC/iPic3D/trunk/ iPic3D_folder
 ```
