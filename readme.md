@@ -17,7 +17,6 @@ https://www.mpich.org/downloads/ <br/>
 During the installation of MPICH follow all the instructions in the README file. <br/>
 Newer versions of OpenMPI should be fine by default in a linux distro.
 
-
 3. Set environment variables:
 
 ```
@@ -56,14 +55,7 @@ Add these at end of file:
     PATH=H5hut_install_path/include/:$PATH
     PATH=H5hut_install_path/lib/:$PATH
 ```
-
-5. Check out the repository: (optional)
-```
-$ svn co https://svn.esat.kuleuven.be/iPIC/iPic3D/trunk/ iPic3D_folder
-```
-where iPic3D_folder is the desired folder for the code.
-
-6. Compiling the code
+5. Compiling the code
 ```
 $ cd iPic3D_folder
 $ cp makefiles/makefile.YourSystem makefile
@@ -78,7 +70,7 @@ Set the following paths in the makefile:
 
 $ make
 ```
-7. Create the folder to store data
+6. Create the folder to store data
 ```
 $ mkdir path_save_data (default is named data)
 $ cd inputfiles
@@ -88,7 +80,7 @@ $ vi GEM.inp
 
 ```
 
-8. Running iPic3D
+7. Running iPic3D
 ```
 $ mpiexec (or mpirun) -n 4 ./iPic3D inputfiles/GEM.inp
 ```
