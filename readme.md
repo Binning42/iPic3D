@@ -63,10 +63,8 @@ where the makefile.YourSystem is a makefile suitable for your system.
 
 Set the following paths in the makefile:
 
-    INC_HDF5 = -I/hdf5_install_path/include
-    LIB_HDF5 = -L/hdf5_install_path/lib
-    HDF5LIBS = -L/hdf5_install_path/lib/ -lhdf5 -L/hdf5_install_path/lib/ -lhdf5_hl 
-    MPELIB = -L/mpich_install_path/lib/ -lmpe
+    HDF5_HOME   = /usr/local/hdf5_install_path
+    H5HUT_HOME  = /usr/local/H5hut_install_path
 
 $ make
 ```
