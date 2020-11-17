@@ -51,9 +51,9 @@ nyc =  256              # nyc = number of cells - y direction
 nzc =  1               # nzc = number of cells - z direction        
 
 # %%%%%%%%%%%%%%%%%% MPI TOPOLOGY %%%%%%%%%%%%%%%
-XLEN = 2               # Number of subdomains in the X direction
-YLEN = 2               # Number of subdomains in the X direction
-ZLEN = 1               # Number of subdomains in the X direction
+XLEN = 3               # Number of subdomains in the X direction
+YLEN = 3               # Number of subdomains in the Y direction
+ZLEN = 1               # Number of subdomains in the Z direction
 
 # %%%%%%%%%%%%%% PARTICLES %%%%%%%%%%%%%%%%%
 #    0 = electrons
