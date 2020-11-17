@@ -61,7 +61,7 @@ ZLEN = 1               # Number of subdomains in the X direction
 #    2,3,4,5,... = ions
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-ns = 0                               # Number of particles
+ns = 2                               # Number of particles
 rhoINIT         = 1.0  1.0           # Initial density (make sure you are neutral)
 rhoINJECT       = 1.0  1.0           # Injection density (make sure you are neutral)
 TrackParticleID = 0    0             # TrackParticleID[species] = 1=true, 0=false 
@@ -71,13 +71,13 @@ npcely          = 3    3             # Particles per cell in Y
 npcelz          = 3    3             # Particles per cell in Z
 NpMaxNpRatio    = 3.0                # Maximum number of particles allocated
 
-qom             = -256.0  1.0        # Charge/mass ratio
+qom             = -1836.0  1.0        # Charge/mass ratio
 uth             = 0.0065  0.021     # Thermal velocity in X
 vth             = 0.0065  0.021     # Thermal velocity in Y
 wth             = 0.0065  0.021     # Thermal velocity in Z
 u0              = 0.0     0.0        # Drift velocity in X
-v0              = 0.0     0.0        # Drift velocity in X
-w0              = 0.01624 -0.00325   # Drift velocity in X
+v0              = 0.0     0.0        # Drift velocity in Y
+w0              = 0.00325 -0.01624  # Drift velocity in Z
 
 # %%%%%%%%%%%% Periodicity in each direction %%%%%%%%%%%%%%%
 PERIODICX       = 1                  # In direction X (1=true, 0=false)
